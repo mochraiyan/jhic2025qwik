@@ -111,7 +111,7 @@ const CardFacility = component$((props: { number: string, title: string, descrip
   return (
     <div class="flex flex-col gap-4 w-70 bg-zinc-800/20 p-6 rounded-lg shadow-lg">
       <div class="flex gap-5 text-lg">
-        <p class="font-bold text-blue-600">{props.number}</p>
+        <p class={`font-bold ${Number.parseInt(props.number) % 2 === 0 ? "text-blue-600" : "text-orange-600"}`}>{props.number}</p>
         <p class="font-semibold text-2xl">{props.title}</p>
       </div>
       <p>{props.description}</p>
@@ -132,6 +132,46 @@ export const FacilitySection = component$(() => {
       </div>
     </section>
   </>
+});
+
+export const AchievementsSection = component$(() => {
+  return <section class="flex flex-col items-center justify-center gap-10 h-screen">
+    <h1 class="font-bold text-3xl">Prestasi Terbaru</h1>
+    <div class="w-9/12 container mx-auto flex gap-10 flex-row items-center justify-center">
+      <div class="shrink-0 bg-zinc-800/20 w-90 h-70 rounded-lg shadow-lg p-2 flex">
+        <img src="/front.avif" class="rounded-lg w-full h-full" alt="Gambar Berita" />
+      </div>
+      <div class="flex gap-4 flex-col p-4">
+        <h2 class="font-semibold text-3xl">Prestasi 1</h2>
+        <p class="text-sm text-zinc-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?</p>
+      </div>
+    </div>
+  </section>;
+});
+
+
+const NewsCard = component$((props: {image: string, title: string, description: string}) => {
+  return <div class="flex flex-col gap-2 w-80 bg-zinc-800/20 p-4 rounded-lg shadow-lg">
+    <img src={props.image} alt={props.title} class="w-full h-40 object-cover rounded-lg" />
+    <h2 class="font-semibold text-lg">{props.title}</h2>
+    <p class="text-sm text-zinc-400">{props.description}</p>
+  </div>
+});
+
+const NewsSection = component$(() => {
+  return (
+    <section class="flex flex-col items-center justify-center gap-10 h-screen">
+      <h1 class="font-bold text-3xl">Berita Terbaru</h1>
+      <div class="grid grid-cols-3 gap-5">
+        <NewsCard image="front.avif" title="Berita 1" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+        <NewsCard image="front.avif" title="Berita 2" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+        <NewsCard image="front.avif" title="Berita 3" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+        <NewsCard image="front.avif" title="Berita 4" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+        <NewsCard image="front.avif" title="Berita 5" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+        <NewsCard image="front.avif" title="Berita 6" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+      </div>
+    </section>
+  );
 });
 
 export default component$(() => {
@@ -165,6 +205,8 @@ export default component$(() => {
       <HistorySection />
       <JurusanSection />
       <FacilitySection />
+      <NewsSection />
+      <AchievementsSection />
     </>
   );
 });

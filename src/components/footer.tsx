@@ -4,7 +4,7 @@ import { SiInstagram, SiYoutube, SiFacebook, SiX } from "@qwikest/icons/simpleic
 export default component$(() => {
     return <>
         <footer class="flex items-center justify-center flex-col w-full border-t-1 border-t-zinc-800">
-            <div class="flex items-center justify-center p-5 gap-80">
+            <div class="flex items-center justify-center p-5 gap-250">
                 <div class="justify-center items-center flex flex-col gap-4">
                     <img src="logo.webp" width={100} height={100} alt="Logo SMKN2 Singosari" />
                     <div class="text-md text-blue-600 flex gap-4 items-center justify-center bg-blue-700/20 p-2 pr-4 pl-4 rounded-full border-1 border-blue-700/50">
