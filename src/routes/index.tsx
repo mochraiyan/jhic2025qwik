@@ -40,14 +40,14 @@ const HistorySection = component$(() => {
     <h1 class="font-bold text-3xl">Jejak Sejarah Kami</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, eligendi.</p>
     <div class="relative">
-
+      
     </div>
   </section>
   </>
 });
 
 const Major = component$((props: { video: string, logo: string, title: string }) => {
-  return <div class="flex gap-x-2.5">
+  return <div class="hover:scale-102 transition-transform flex gap-x-2.5">
       <div class="bg-zinc-800/20 rounded-lg p-2">
         <div class={`p-6 rounded-lg flex flex-row justify-start items-end w-60 h-90 bg-[url(/${props.video})] object-contain bg-cover bg-no-repeat`}>
           <div class="flex gap-4 w-full items-center justify-between text-end">
@@ -80,30 +80,61 @@ const JurusanSection = component$(() => {
     }
   })
 
-return <>
+  return <>
   <section class="flex flex-col items-center justify-center gap-10 h-screen">
     <h1 class="font-bold text-3xl">
       Jurusan
     </h1>
-    <div class="flex items-center justify-center gap-10">
-      <LuArrowLeft class="cursor-pointer text-4xl" onClick$={scrollLeft} />
-      <div class="flex gap-2 w-255 overflow-x-scroll no-scrollbar" ref={scrollContainerRef}>
-        <Major video="front.avif" logo="RPL.webp" title="Rekayasa Perangkat Lunak"/>
-        <Major video="front.avif" logo="TKJ.webp" title="Rekayasa Perangkat Lunak"/>
-        <Major video="front.avif" logo="AV.webp" title="Rekayasa Perangkat Lunak"/>
-        <Major video="front.avif" logo="AN.webp" title="Rekayasa Perangkat Lunak"/>
-        <Major video="front.avif" logo="BC.webp" title="Rekayasa Perangkat Lunak"/>
-        <Major video="front.avif" logo="MT.webp" title="Rekayasa Perangkat Lunak"/>
-        <Major video="front.avif" logo="AV.webp" title="Rekayasa Perangkat Lunak"/>
+    <div class="transition flex items-center justify-center gap-10">
+      <div class="hover:bg-orange-600 transition flex items-center justify-center bg-zinc-800/20 border-1 border-zinc-800 p-2 rounded-full shadow-lg">
+        <LuArrowLeft class="cursor-pointer text-4xl" onClick$={scrollLeft} />
       </div>
-      <LuArrowRight class="cursor-pointer text-4xl" onClick$={scrollRight} />
+      <div class="bg-zinc-800/20 p-4 rounded-2xl shadow-lg flex gap-2 w-269 overflow-x-scroll no-scrollbar" ref={scrollContainerRef}>
+        <Major video="front.avif" logo="RPL.webp" title="Rekayasa Perangkat Lunak"/>
+        <Major video="front.avif" logo="TKJ.webp" title="Teknik Komputer Jaringan"/>
+        <Major video="front.avif" logo="DKV.webp" title="Desain Komunikasi Visual" />
+        <Major video="front.avif" logo="AV.webp" title="Audio Video"/>
+        <Major video="front.avif" logo="AN.webp" title="Animasi"/>
+        <Major video="front.avif" logo="BC.webp" title="Broadcasting"/>
+        <Major video="front.avif" logo="MT.webp" title="Mekatronika"/>
+        <Major video="front.avif" logo="EI.webp" title="Elektronika Industri"/>
+      </div>
+      <div class="hover:bg-orange-600 transition flex items-center justify-center bg-zinc-800/20 border-1 border-zinc-800 p-2 rounded-full shadow-lg">
+        <LuArrowRight class="cursor-pointer text-4xl" onClick$={scrollRight} />
+      </div>
     </div>
   </section>
   </>
 });
 
+const CardFacility = component$((props: { number: string, title: string, description: string }) => {
+  return (
+    <div class="flex flex-col gap-4 w-70 bg-zinc-800/20 p-6 rounded-lg shadow-lg">
+      <div class="flex gap-5 text-lg">
+        <p class="font-bold text-blue-600">{props.number}</p>
+        <p class="font-semibold text-2xl">{props.title}</p>
+      </div>
+      <p>{props.description}</p>
+    </div>
+  );
+});
+
+export const FacilitySection = component$(() => {
+  return <>
+    <section class="flex flex-col items-center justify-center gap-10 h-screen">
+      <h1 class="font-bold text-3xl">Fasilitas Sekolah</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, eligendi.</p>
+      <div class="flex flex-row gap-5">
+        <CardFacility number="01" title="Lorem" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+        <CardFacility number="02" title="Lorem" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+        <CardFacility number="03" title="Lorem" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+        <CardFacility number="04" title="Lorem" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nesciunt expedita voluptatibus praesentium exercitationem placeat corporis optio similique debitis iste?" />
+      </div>
+    </section>
+  </>
+});
+
 export default component$(() => {
-  
   return (
     <>
       <section class="h-screen flex items-center justify-center p-5">
@@ -133,6 +164,7 @@ export default component$(() => {
       <VideoProfileSekolah />
       <HistorySection />
       <JurusanSection />
+      <FacilitySection />
     </>
   );
 });
