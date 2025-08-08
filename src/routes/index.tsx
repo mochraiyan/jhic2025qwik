@@ -39,15 +39,15 @@ export default component$(() => {
             <img src="logo.webp" width={400} height={400} />
           </div>
         </div>
-
-        <InformationSec />
-        <VideoProfileSec />
-        <HistorySec />
-        <MajorSec />
-        <FacilitySec />
-        <NewsSec />
-        <AchievementsSec />
       </section>
+
+      <InformationSec />
+      <VideoProfileSec />
+      <HistorySec />
+      <MajorSec />
+      <FacilitySec />
+      <NewsSec />
+      <AchievementsSec />
     </>
   );
 });
