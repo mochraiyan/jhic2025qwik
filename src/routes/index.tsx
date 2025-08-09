@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
-import { LuMove3D } from "@qwikest/icons/lucide";
+import { LuArrowRight } from "@qwikest/icons/lucide";
 
 import InformationSec from "~/components/information";
 import VideoProfileSec from "~/components/video-profile";
@@ -20,8 +20,8 @@ export default component$(() => {
               <h1 class="text-3xl font-bold">Inovasi</h1>
               <p class="text-md">Raih Prestasi</p>
             </div>
-            <div class="h-1 w-45 bg-zinc-600"></div>
-            <div class="flex flex-col gap-5">
+            <div class="h-1 w-45 bg-zinc-600 mt-2.5"></div>
+            <div class="flex flex-col gap-5 mt-2.5">
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Perspiciatis, hic.
@@ -30,7 +30,7 @@ export default component$(() => {
                 href="#"
                 class="flex h-fit w-fit items-center justify-start gap-5 rounded-full border-1 border-zinc-800 bg-zinc-800/20 p-2 pr-4 pl-4 font-light shadow-lg transition hover:scale-110 hover:border-orange-600 hover:bg-orange-600"
               >
-                <LuMove3D class="text-lg" />
+                <LuArrowRight class="text-lg" />
                 View More
               </a>
             </div>
