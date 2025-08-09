@@ -20,8 +20,8 @@ export default component$(() => {
               <h1 class="text-3xl font-bold">Inovasi</h1>
               <p class="text-md">Raih Prestasi</p>
             </div>
-            <div class="h-1 w-45 bg-zinc-600 mt-2.5"></div>
-            <div class="flex flex-col gap-5 mt-2.5">
+            <div class="mt-2.5 h-1 w-45 bg-zinc-600"></div>
+            <div class="mt-2.5 flex flex-col gap-5">
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Perspiciatis, hic.

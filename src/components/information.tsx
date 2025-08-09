@@ -3,7 +3,7 @@ import { component$ } from "@builder.io/qwik";
 export default component$(() => {
   return (
     <>
-      <section class="flex h-screen w-9/12 items-center justify-center gap-15">
+      <section class="mb-30 flex h-fit w-9/12 items-center justify-center gap-15">
         <div class="flex flex-shrink-0 flex-col items-center gap-10 rounded-lg border-1 border-zinc-800 bg-zinc-800/20 p-4 shadow-lg">
           <img
             src="logo.webp"

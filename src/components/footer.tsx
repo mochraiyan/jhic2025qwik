@@ -10,7 +10,7 @@ export default component$(() => {
   return (
     <>
       <footer class="flex w-full flex-col items-center justify-center border-t-1 border-t-zinc-800">
-        <div class="flex items-center justify-center gap-250 p-5">
+        <div class="flex items-center justify-center gap-100 p-5">
           <div class="flex flex-col items-center justify-center gap-4">
             <img
               src="/logo.webp"
