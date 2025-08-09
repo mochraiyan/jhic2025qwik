@@ -7,7 +7,7 @@ export default component$(() => {
       <header class="fixed top-4 right-10 left-10 z-100 flex flex-row justify-between rounded-full bg-blue-800 p-4 pr-10 pl-4 shadow-lg">
         <div class="flex items-center gap-3">
           <img
-            src="logo.webp"
+            src="/logo.webp"
             width={60}
             height={60}
             alt="Logo SMKN 2 Singosari"

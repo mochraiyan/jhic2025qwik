@@ -13,7 +13,7 @@ export default component$(() => {
         <div class="flex items-center justify-center gap-250 p-5">
           <div class="flex flex-col items-center justify-center gap-4">
             <img
-              src="logo.webp"
+              src="/logo.webp"
               width={100}
               height={100}
               alt="Logo SMKN2 Singosari"
