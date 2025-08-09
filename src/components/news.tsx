@@ -3,14 +3,16 @@ import { component$ } from "@builder.io/qwik";
 const NewsCard = component$(
   (props: { image: string; title: string; description: string }) => {
     return (
-      <div class="flex w-80 flex-col gap-2 rounded-lg bg-zinc-800/20 p-4 shadow-lg">
+      <div class="flex w-80 flex-col rounded-lg bg-zinc-800/20 shadow-lg">
         <img
           src={props.image}
           alt={props.title}
-          class="h-40 w-full rounded-lg object-cover"
+          class="h-full w-full rounded-t-lg object-cover"
         />
-        <h2 class="text-lg font-semibold">{props.title}</h2>
-        <p class="text-sm text-zinc-400">{props.description}</p>
+        <div class="flex flex-col p-6">
+          <h2 class="text-lg font-semibold">{props.title}</h2>
+          <p class="text-sm text-zinc-500">{props.description}</p>
+        </div>
       </div>
     );
   },

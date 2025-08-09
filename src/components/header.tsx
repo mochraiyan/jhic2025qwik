@@ -4,7 +4,7 @@ import { LuMenu } from "@qwikest/icons/lucide";
 export default component$(() => {
   return (
     <>
-      <header class="fixed top-4 right-10 left-10 z-100 flex flex-row justify-between rounded-full bg-blue-800 p-4 pr-10 pl-4 shadow-lg">
+      <header class="fixed top-4 right-10 left-10 z-100 flex flex-row justify-between rounded-full bg-blue-800/30 p-4 pr-10 pl-4 opacity-95 shadow-lg backdrop-blur-lg">
         <div class="flex items-center gap-3">
           <img
             src="/logo.webp"

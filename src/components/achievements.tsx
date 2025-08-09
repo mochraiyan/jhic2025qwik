@@ -4,7 +4,7 @@ import { LuArrowLeft, LuArrowRight } from "@qwikest/icons/lucide";
 
 export default component$(() => {
   return (
-    <section class="flex h-screen flex-col items-center justify-center gap-10">
+    <section class="mt-20 flex h-screen flex-col items-center justify-center gap-10">
       <h1 class="text-3xl font-bold">Prestasi Terbaru</h1>
       <div class="container mx-auto flex w-200 flex-col items-center justify-center gap-10 rounded-lg bg-zinc-800/20 p-10 shadow-lg">
         <div class="flex items-center justify-center gap-10">
@@ -27,7 +27,7 @@ export default component$(() => {
         <div class="h-1 w-full items-end border-t-1 border-t-zinc-800"></div>
         <div class="flex w-full items-end justify-end">
           <div class="flex items-center gap-5">
-            <p class="text-2xl font-bold text-zinc-700">1/3</p>
+            <p class="text-2xl font-bold text-zinc-500">1/3</p>
             <div class="flex cursor-pointer items-center justify-center rounded-full border-1 border-zinc-800 bg-zinc-800/20 p-2 text-2xl transition hover:bg-orange-600">
               <LuArrowLeft />
             </div>
